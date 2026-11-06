@@ -15,13 +15,25 @@ namespace HelloWorld
 
       // CONSOLE METHODS
       // Change the text color
-      Console.ForegroundColor = ConsoleColor.Black;
+      // Console.ForegroundColor = ConsoleColor.Black;
 
       // Change the background color
-      Console.BackgroundColor = ConsoleColor.White;
+      // Console.BackgroundColor = ConsoleColor.White;
 
       // Set background for whole console
-      Console.Clear();
+      // Console.Clear();
+
+      // Outputs text without a newline
+      Console.Write("What is your name? ");
+
+      // Stores data entered by user in name
+      string name = Console.ReadLine();
+
+      // Outputs Hello + value store in name
+      Console.WriteLine($"Hello {name}");
+
+
+
 
     }
   }
