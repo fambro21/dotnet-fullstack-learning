@@ -104,6 +104,30 @@ namespace HelloWorld
     // Add commas and decimals 
     Console.WriteLine("Commas : {0:n4}", 2300);
 
+    // Strings
+    string randString = "This is a string";
+
+    // Number of characters in string
+    Console.WriteLine("String Length : {0}", randString.Length);
+
+    // Check if the string contains other string
+    Console.WriteLine("String Contains is : {0}", randString.Contains("is"));
+
+    // Index of string match
+    Console.WriteLine("Index of is : {0}", randString.IndexOf("is"));
+
+    // Remove number of characters starting at an index
+    Console.WriteLine("Remove string : {0}", randString.Remove(10, 6));
+
+    // Add a string with another
+    Console.WriteLine("Replace String : {0}", randString.Replace("string", "sentence"));
+
+    
+
+    
+
+
+
 
 
 
