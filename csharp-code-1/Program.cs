@@ -75,6 +75,26 @@ namespace HelloWorld
       // ulong : 64-bit unsigned int 0 to 18,446,744,073,709,551,615
       // ushort : 16-bit unsigned int 0 to 65,535
 
+    // DATA TYPE CONVERSION
+
+    bool boolFromStr = bool.Parse("True");
+    int intFromStr = int.Parse("100");
+    double dblFromStr = double.Parse("1.234");
+
+    // Convert double into a string 
+    string strVal = dblFromStr.ToString();
+
+    // Get the new data type 
+    Console.WriteLine($"Data type : {strVal.GetType()}");
+
+    // Cast double into integer (Explicit Conversion)
+    // smaller size type to a larger size
+    double dblNum = 12.345;
+    Console.WriteLine($"Integer : {(int)dblNum}");
+
+
+
+
 
 
 
