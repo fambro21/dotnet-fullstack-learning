@@ -264,6 +264,107 @@ namespace HelloWorld
         Console.WriteLine("CopyTo : {0}", m);
     }
 
+    // IF / ELSE 
+    // Relational Operators : > < >= <= == !=
+    // Logical Operators : && || !
+
+    int age = 17;
+
+    if ((age >=5) && (age <= 7))
+    {
+        Console.WriteLine("Go to elementary school");
+    } 
+    else if ((age > 7) && (age < 13))
+    {
+       Console.WriteLine("Go to middle school"); 
+    }
+    else if ((age > 13) && (age < 19))
+    {
+        Console.WriteLine("Go to high school");
+    }
+    else
+    {
+       Console.WriteLine("Go to college"); 
+    }
+
+    if ((age < 14) || (age > 67))
+    {
+        Console.WriteLine("You shouldn't work");
+    }
+
+    Console.WriteLine("! true = " + (!true));
+
+    // Ternary Operator
+    bool canDrive = age >= 16 ? true: false;
+
+    switch (age)
+      {
+        case 1:
+        case 2:
+           Console.WriteLine("Go to Day Care");
+           break;
+        case 3:
+        case 4:
+           Console.WriteLine("Go to Preschool");
+           break;
+        case 5:
+           Console.WriteLine("Go to Kindergarten");
+           break;
+        default:
+          Console.WriteLine("Go to another school");
+
+          goto OtherSchool;
+      }
+
+    OtherSchool:
+      Console.WriteLine("Elementary, Middle, High School");
+
+      string name2 = "Derek";
+      string name3 = "Derek";
+
+      if (name2.Equals(name3, StringComparison.Ordinal))
+      {
+        Console.WriteLine("Name are Equal");
+      }
+
+      // While loop
+      int i = 1;
+      while (i <= 10)
+      {
+        if (i % 2 == 0)
+        {
+          i++;
+
+          continue;
+        }
+
+        if (i == 9) break;
+
+        Console.WriteLine(i);
+        i++;
+      }
+
+      // Do While Loop
+      // use do while when you must execute the code
+      // at least once
+
+      // Generate a random number
+      Random rnd = new Random();
+      int secretNumber = rnd.Next(1, 11);
+      int numberGuessed = 0;
+      Console.WriteLine("Random Num : ", secretNumber);
+
+      do
+      {
+        Console.WriteLine("Enter a number between 1 & 10 : ");
+        numberGuessed = Convert.ToInt32(Console.ReadLine());
+      } while (secretNumber != numberGuessed);
+
+      Console.WriteLine("You guessed it is was {0}", secretNumber);
+
+
+
+
 
 
 
