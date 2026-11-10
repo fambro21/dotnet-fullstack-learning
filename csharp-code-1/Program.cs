@@ -86,10 +86,24 @@ namespace HelloWorld
       return dblX + dblY;
     }
 
+    static void PaintCar(CarColor cc)
+    {
+      Console.WriteLine("The car was painted {0} with the code {1}", cc, (int)cc);
+    }
+
     // Named Parameters
     static void PrintInfo(string name, int zipCode)
     {
       Console.WriteLine("{0} lives in the zip code {1}", name, zipCode);
+    }
+
+    enum CarColor : byte
+    {
+      Orange = 1,
+      Blue,
+      Green,
+      Red,
+      Yellow
     }
 
     static void Main(string[] args)
@@ -577,7 +591,26 @@ namespace HelloWorld
       Console.WriteLine("5 + 4 = {0}", GetSum2(5, 4));
 
       Console.WriteLine("5 + 4 = {0}", GetSum2("5", "4"));
-    }
 
+      // DATETIME & TIMESPAN
+      // Used to define dates
+      DateTime awesomeDate = new DateTime(1974, 12, 21);
+      Console.WriteLine("Day of Week : {0}", awesomeDate.DayOfWeek);
+
+      // TimeSpan
+      // Used to define a time
+      TimeSpan lunchTime = new TimeSpan(12, 30, 0);
+
+      // Change values
+      lunchTime = lunchTime.Subtract(new TimeSpan(0, 15, 0));
+      lunchTime = lunchTime.Add(new TimeSpan(1, 0, 0));
+      Console.WriteLine("New Time : {0}", lunchTime.ToString());
+
+      // ENUM
+      CarColor car1 = CarColor.Blue;
+      PaintCar(car1);
+
+      Console.Read();
+    }
   }
 }
